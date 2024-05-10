@@ -17,7 +17,7 @@ METRICS_PORT = 8001
 class HandleRequests(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         now = time.time()
-        time.sleep(random.randint(0, 3))
+        time.sleep(random.randint(3, 8))
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
